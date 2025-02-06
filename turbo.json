@@ -1,0 +1,59 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["tsconfig.json", "pnpm-lock.yaml"],
+  "globalEnv": ["GITHUB_TOKEN"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "types/**"],
+      "env": ["FIREBASE_ADMIN_SERVICE_ACCOUNT"]
+    },
+    "docs:build": {
+      "dependsOn": ["^docs:build"]
+    },
+    "audit": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "clean:all": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "cache": true,
+      "outputs": []
+    },
+    "prepare": {
+      "cache": false
+    },
+    "reset:all": {
+      "dependsOn": ["clean"]
+    },
+    "release": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputLogs": "new-only"
+    },
+    "start": {
+      "cache": false,
+      "dependsOn": ["build"]
+    },
+    "typecheck": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputs": ["tsconfig.tsbuildinfo"]
+    },
+    "test": {},
+    "e2e": {},
+    "e2e:report": {},
+    "e2e:ui": {},
+    "e2e:chromium": {},
+    "e2e:debug": {},
+    "e2e:codegen": {}
+  }
+}

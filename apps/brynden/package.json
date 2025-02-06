@@ -1,0 +1,20 @@
+{
+  "name": "brynden",
+  "version": "0.1.0",
+  "description": "O projeto Brynden é o site oficial da clínica odontológica, desenvolvido para oferecer uma experiência digital moderna, intuitiva e informativa aos pacientes. Inspirado em Brynden “Peixe Negro” Tully, conhecido por sua força, precisão e confiabilidade, o site reflete esses valores ao apresentar os serviços da clínica com clareza e profissionalismo. ",
+  "private": true,
+  "scripts": {
+    "dev": "rm -rf .next && next dev --port 3000",
+    "clean": "rm -rf .turbo .next .vercel dist node_modules pnpm-lock.yaml playwright-report test-results",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "lint": "next lint --fix",
+    "e2e": "pnpm exec playwright test",
+    "e2e:ui": "pnpm exec playwright test --ui",
+    "e2e:chromium": "pnpm exec playwright test --project=chromium",
+    "e2e:debug": "pnpm exec playwright test --debug",
+    "e2e:codegen": "pnpm exec playwright codegen",
+    "e2e:report": "pnpm exec playwright show-report",
+    "typecheck": "tsc --noEmit"
+  }
+}
