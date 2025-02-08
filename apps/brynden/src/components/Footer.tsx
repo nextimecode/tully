@@ -31,7 +31,7 @@ export function Footer() {
 
         <div className="mt-3">
           <p className="text-gray-500 dark:text-neutral-500">
-            Mais um produto da{' '}
+            Desenvolvido por{' '}
             <a
               className="text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500"
               href="https://www.nextime.com.br/"
@@ -39,10 +39,9 @@ export function Footer() {
             >
               NeXTIME
             </a>
-            .
           </p>
           <p className="text-gray-500 dark:text-neutral-500">
-            Copyright © {new Date().getFullYear()} | NeXTverso | v.{version}
+            Copyright © {new Date().getFullYear()} | implaLents | v.{version}
           </p>
         </div>
 

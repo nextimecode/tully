@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:3000/api
+
+# @name get_blog_posts
+GET {{baseUrl}}/blog
+Content-Type: application/json
+
+###
+
+# @name get_blog_post_by_slug
+GET {{baseUrl}}/blog/importancia-da-limpeza-dental-regular
+Content-Type: application/json
