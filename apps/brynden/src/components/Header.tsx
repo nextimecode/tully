@@ -1,12 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { User } from 'lucide-react'
+import Logo from 'public/assets/logo.svg'
 
 import { getBaseUrl } from '@/env'
-
-import { Title } from './Title'
 
 const { nedUrl } = getBaseUrl()
 
@@ -19,9 +19,7 @@ export function Header() {
         aria-label="Global"
       >
         <div className="md:col-span-3">
-          <Title color="violet" size="text-xl lg:text-3xl">
-            NeXTverso
-          </Title>
+          <Image src={Logo} alt="NeXTverso" width={300} height={300} />
         </div>
 
         <div className="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">

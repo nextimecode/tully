@@ -5,8 +5,8 @@
 @config '../../tailwind.config.ts';
 
 :root {
-  --background: #000;
-  --foreground: #ededed;
+  --background: #fff;
+  --foreground: #1c1c1e;
 }
 
 html {

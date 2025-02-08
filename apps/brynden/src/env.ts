@@ -38,9 +38,6 @@ export const getBaseUrl = () => {
   const vercelUrl = env.NEXT_PUBLIC_VERCEL_URL
   const isPreview = env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
 
-  console.error('vercelUrl', vercelUrl)
-  console.error('isPreview', isPreview)
-
   if (isPreview && vercelUrl) {
     return {
       aryaUrl: replaceSubdomain(vercelUrl, 'arya'),
