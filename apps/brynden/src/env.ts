@@ -62,7 +62,7 @@ export const env = createEnv({
     NEXT_PUBLIC_VERCEL_ENV: process.env.NEXT_PUBLIC_VERCEL_ENV || 'preview',
     NEXT_PUBLIC_VERCEL_PREVIEW_URL:
       process.env.NEXT_PUBLIC_VERCEL_PREVIEW_URL || vercelPreviewUrl,
-    NEXT_PUBLIC_BRYNDEN_URL: process.env.NEXT_PUBLIC_ARYA_URL || bryndenUrl,
+    NEXT_PUBLIC_BRYNDEN_URL: process.env.NEXT_PUBLIC_BRYNDEN_URL || bryndenUrl,
     VERCEL_GIT_COMMIT_REF: process.env.VERCEL_GIT_COMMIT_REF || '',
     VERCEL_PREVIEW_URL: vercelPreviewUrl
   }
