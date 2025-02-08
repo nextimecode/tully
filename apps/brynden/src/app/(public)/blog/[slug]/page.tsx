@@ -1,8 +1,10 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 
 import { BlogArticle } from '@/components/blog-article'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+import { api } from '@/data/api'
 
 export interface Post {
   title: string
@@ -16,24 +18,33 @@ export interface Post {
 }
 
 async function getPost(slug: string) {
-  const res = await fetch(`${baseUrl}/api/blog/${slug}`, {
+  const response = await api(`/blog/${slug}`, {
     cache: 'force-cache'
   })
-  const post: Post = await res.json()
+  if (!response.ok) notFound()
+  const post: Post = await response.json()
   if (!post) notFound()
   return post
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch(`${baseUrl}/api/blog`, {
-    cache: 'force-cache'
-  }).then(res => res.json())
+  try {
+    const response = await api(`/blog`, {
+      cache: 'force-cache'
+    })
+    if (!response.ok) notFound()
 
-  // const posts = await fetch(`${baseUrl}/api/blog`).then(res => res.json())
+    const posts: Post[] = await response.json()
 
-  return posts.map((post: Post) => ({
-    slug: String(post.slug)
-  }))
+    return posts.map((post: Post) => ({
+      params: {
+        slug: post.slug
+      }
+    }))
+  } catch (error) {
+    console.error(error)
+    return []
+  }
 }
 
 export async function generateMetadata({

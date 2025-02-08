@@ -1,8 +1,10 @@
+export const dynamic = 'force-dynamic'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+import { api } from '@/data/api'
 
 export interface Post {
   title: string
@@ -16,13 +18,19 @@ export interface Post {
 }
 
 async function getPosts() {
-  // const res = await fetch(`${baseUrl}/api/blog`, {
-  //   cache: 'force-cache'
-  // })
-  const res = await fetch(`${baseUrl}/api/blog`)
-  const posts: Post[] = await res.json()
-  if (!posts) notFound()
-  return posts
+  try {
+    const response = await api(`/blog`, {
+      cache: 'force-cache'
+    })
+    if (!response.ok) notFound()
+
+    const posts: Post[] = await response.json()
+
+    return posts
+  } catch (error) {
+    console.error(error)
+    return []
+  }
 }
 
 export async function BlogSection() {
