@@ -25,11 +25,11 @@ async function getPost(slug: string) {
 }
 
 export async function generateStaticParams() {
-  // const posts = await fetch(`${baseUrl}/api/blog`, {
-  //   cache: 'force-cache'
-  // }).then(res => res.json())
+  const posts = await fetch(`${baseUrl}/api/blog`, {
+    cache: 'force-cache'
+  }).then(res => res.json())
 
-  const posts = await fetch(`${baseUrl}/api/blog`).then(res => res.json())
+  // const posts = await fetch(`${baseUrl}/api/blog`).then(res => res.json())
 
   return posts.map((post: Post) => ({
     slug: String(post.slug)

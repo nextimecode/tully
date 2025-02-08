@@ -1,7 +1,3 @@
-import Slide1 from '/public/assets/slide1.jpg'
-import Slide2 from '/public/assets/slide2.jpg'
-import Slide3 from '/public/assets/slide3.jpg'
-
 export const Hero = () => {
   return (
     <div className="px-4 lg:px-6">
