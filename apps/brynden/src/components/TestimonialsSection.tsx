@@ -27,7 +27,7 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <div className="overflow-hidden bg-primary dark:bg-neutral-950">
-      <div className="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="relative max-w-[85rem] pt-12 px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Título */}
         <div className="max-w-2xl w-3/4 lg:w-1/2 mb-6 sm:mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold">

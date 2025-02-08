@@ -1,94 +1,62 @@
-import { ReactNode } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-// Icon Components
-export function PeriodontiaIcon() {
-  return (
-    <svg
-      className="shrink-0 size-6 text-blue-600 dark:text-blue-400"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="13.5" cy="6.5" r=".5" />
-      <circle cx="17.5" cy="10.5" r=".5" />
-      <circle cx="8.5" cy="7.5" r=".5" />
-      <circle cx="6.5" cy="12.5" r=".5" />
-      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-    </svg>
-  )
-}
-
-export function DentisticaIcon() {
-  return (
-    <svg
-      className="shrink-0 size-6 text-blue-600 dark:text-blue-400"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M2 3h20" />
-      <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" />
-      <path d="m7 21 5-5 5 5" />
-    </svg>
-  )
-}
-
-export function EndodontiaIcon() {
-  return (
-    <svg
-      className="shrink-0 size-6 text-blue-600 dark:text-blue-400"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
-      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-      <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
-      <path d="M2 7h20" />
-      <path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7" />
-    </svg>
-  )
-}
-
-interface ServiceCardProps {
-  icon: ReactNode
+type ServiceCardProps = {
   title: string
   description: string
+  imageUrl: string
+  href: string
 }
 
-export function ServiceCard({ icon, title, description }: ServiceCardProps) {
+export function ServiceCard({
+  title,
+  description,
+  imageUrl,
+  href
+}: ServiceCardProps) {
   return (
-    <div className="size-full bg-white shadow-lg rounded-lg p-5 dark:bg-neutral-900">
-      <div className="flex items-center gap-x-4 mb-3">
-        <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-blue-50 bg-blue-100 dark:border-blue-900 dark:bg-blue-800">
-          {icon}
+    <Link
+      href={href}
+      className="group block rounded-xl overflow-hidden focus:outline-none"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+        <div className="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+          <Image
+            src={imageUrl}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+          />
         </div>
-        <div className="shrink-0">
-          <h3 className="block text-lg font-semibold text-gray-800 dark:text-white">
+
+        <div className="grow">
+          <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
             {title}
           </h3>
+          <p className="mt-3 text-gray-600 dark:text-neutral-400">
+            {description}
+          </p>
+          <p className="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+            Saiba mais
+            <svg
+              className="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </p>
         </div>
       </div>
-      <p className="text-gray-600 dark:text-neutral-400">{description}</p>
-    </div>
+    </Link>
   )
 }
 
@@ -96,50 +64,72 @@ export function ServicesSection() {
   const services = [
     {
       title: 'Periodontia',
-      description: 'Preventiva e estética.',
-      icon: <PeriodontiaIcon />
+      description:
+        'Cuidado especializado na prevenção e tratamento de doenças gengivais, promovendo saúde bucal e estética.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Dentística',
-      description: 'Restaurações estéticas diretas e indiretas.',
-      icon: <DentisticaIcon />
+      description:
+        'Realce do sorriso com restaurações estéticas, tanto diretas quanto indiretas, para dentes danificados.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Endodontia',
-      description: 'Tratamentos e retratamento de canais.',
-      icon: <EndodontiaIcon />
+      description:
+        'Especialidade focada no tratamento e retratamento de canais radiculares, preservando dentes comprometidos.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Prótese',
-      description: 'Reabilitação Oral sobre dentes e implantes.',
-      icon: <PeriodontiaIcon />
+      description:
+        'Reabilitação oral com próteses sobre dentes naturais e implantes, restaurando função e estética.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Disfunções Articulares (DTM)',
-      description: 'Tratamento para disfunções temporomandibulares.',
-      icon: <DentisticaIcon />
+      description:
+        'Tratamento especializado para disfunções temporomandibulares, aliviando dores e melhorando a função mandibular.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Implantodontia',
-      description: 'Implantes dentários.',
-      icon: <EndodontiaIcon />
+      description:
+        'Implantes dentários para substituição de dentes ausentes, proporcionando funcionalidade e estética duradoura.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     },
     {
       title: 'Estética',
-      description: 'Lentes de contato dental, clareamentos.',
-      icon: <PeriodontiaIcon />
+      description:
+        'Tratamentos estéticos como lentes de contato dental e clareamento para um sorriso mais bonito e saudável.',
+      imageUrl:
+        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+      href: '#'
     }
   ]
 
   return (
-    <div className="bg-primary px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
+    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
-            icon={service.icon}
             title={service.title}
             description={service.description}
+            imageUrl={service.imageUrl}
+            href={service.href}
           />
         ))}
       </div>

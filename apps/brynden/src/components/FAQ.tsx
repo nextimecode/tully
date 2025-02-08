@@ -56,7 +56,7 @@ const faqData: FAQItem[] = [
 export const FAQ = () => {
   return (
     <section id="faq">
-      <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-2xl mx-auto mb-10 lg:mb-14 text-center">
           <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
             Talvez você esteja se perguntando…
