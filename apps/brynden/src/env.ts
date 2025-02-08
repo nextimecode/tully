@@ -47,7 +47,6 @@ const { bryndenUrl } = getBaseUrl()
 export const env = createEnv({
   server: {
     VERCEL_GIT_COMMIT_REF: z.string(),
-    FIREBASE_ADMIN_SERVICE_ACCOUNT: z.string(),
     VERCEL_PREVIEW_URL: z.string()
   },
 
@@ -58,7 +57,6 @@ export const env = createEnv({
   },
 
   runtimeEnv: {
-    FIREBASE_ADMIN_SERVICE_ACCOUNT: process.env.FIREBASE_ADMIN_SERVICE_ACCOUNT,
     NEXT_PUBLIC_VERCEL_ENV: process.env.NEXT_PUBLIC_VERCEL_ENV || 'preview',
     NEXT_PUBLIC_VERCEL_PREVIEW_URL:
       process.env.NEXT_PUBLIC_VERCEL_PREVIEW_URL || vercelPreviewUrl,
