@@ -59,7 +59,7 @@ export function BlogSection() {
         {blogPosts.map((post, index) => (
           <Link
             key={index}
-            href="#"
+            href={`/blog/${post.slug}`}
             className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40 dark:focus:border-transparent dark:focus:shadow-black/40"
           >
             <div className="aspect-w-16 aspect-h-11 relative w-full h-0 pb-[68.75%]">
