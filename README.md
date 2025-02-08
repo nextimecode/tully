@@ -11,9 +11,10 @@
 
 # Projeto Tully - Família, Dever e Honra
 
-**Tully** é o monorepo central da nossa software house, responsável por organizar e integrar todos os projetos dos clientes de forma eficiente e escalável. Inspirado na Casa Tully, que valoriza *Família, Dever e Honra*, o monorepo reflete esses princípios através da colaboração entre equipes e da entrega de soluções robustas.
+**Tully** é o monorepo central da nossa software house, responsável por organizar e integrar todos os projetos dos clientes de forma eficiente e escalável. Inspirado na Casa Tully, que valoriza _Família, Dever e Honra_, o monorepo reflete esses princípios através da colaboração entre equipes e da entrega de soluções robustas.
 
 ## Índice
+
 - [Projeto Tully - Família, Dever e Honra](#projeto-tully---família-dever-e-honra)
   - [Índice](#índice)
   - [Tecnologias](#tecnologias)
@@ -24,6 +25,7 @@
   - [Licença](#licença)
 
 ## Tecnologias
+
 - **TypeScript**
 - **React.js** / **Next.js 15**
 - **TailwindCSS** / **Preline UI**
@@ -35,6 +37,7 @@
 - **Turborepo** para gerenciamento do monorepo
 
 ## Estrutura do Projeto
+
 ```
 /tully
   /apps
@@ -55,11 +58,13 @@
 ## Como Rodar o Projeto
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/seu-usuario/tully.git
    ```
 
 2. Instale as dependências:
+
    ```bash
    pnpm install
    ```
@@ -70,15 +75,18 @@
    ```
 
 ## Commits e Convenções
+
 Este projeto segue o padrão de **Conventional Commits**. Certifique-se de que suas mensagens de commit estejam no formato correto.
 
 Exemplo:
+
 ```bash
 feat: adiciona novo componente de botão reutilizável
 fix: corrige bug na validação de formulário
 ```
 
 ## Contribuições
+
 Contribuições são bem-vindas! Siga as boas práticas de **Clean Code**, **DDD** e **TDD** para manter a qualidade do projeto.
 
 1. Crie uma branch:
@@ -88,5 +96,5 @@ Contribuições são bem-vindas! Siga as boas práticas de **Clean Code**, **DDD
 2. Faça suas alterações e envie um PR.
 
 ## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
 
+Este projeto está licenciado sob a [MIT License](LICENSE).
