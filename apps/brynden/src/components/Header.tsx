@@ -3,12 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { User } from 'lucide-react'
 import Logo from 'public/assets/logo.svg'
-
-import { getBaseUrl } from '@/env'
-
-const { nedUrl } = getBaseUrl()
 
 export function Header() {
   return (
@@ -19,18 +14,12 @@ export function Header() {
         aria-label="Global"
       >
         <div className="md:col-span-3">
-          <Image src={Logo} alt="NeXTverso" width={150} height={71} />
+          <Link href="/">
+            <Image src={Logo} alt="NeXTverso" width={200} height={95} />
+          </Link>
         </div>
 
         <div className="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
-          <Link
-            className="transition-all duration-300 hover:animate-button-glow py-2 px-3 inline-flex items-center gap-x-2 text-sm rounded-xl border border-transparent bg-primary text-white font-semibold disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-primary-600"
-            href={nedUrl}
-          >
-            <User className="h-4 w-4" />
-            Conta NeXTIME
-          </Link>
-
           <div className="md:hidden">
             <button
               type="button"

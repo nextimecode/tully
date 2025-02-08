@@ -1,3 +1,7 @@
+import Slide1 from '/public/assets/slide1.jpg'
+import Slide2 from '/public/assets/slide2.jpg'
+import Slide3 from '/public/assets/slide3.jpg'
+
 export const Hero = () => {
   return (
     <div className="px-4 lg:px-6">
@@ -9,22 +13,23 @@ export const Hero = () => {
           <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
             {[
               {
-                title: 'Nike React',
-                subtitle: "Rewriting sport's playbook for billions of athletes",
+                title: 'Sorrisos Saudáveis',
+                subtitle: 'Cuidando do seu sorriso com tecnologia e carinho',
                 image:
-                  'https://images.unsplash.com/photo-1615615228002-890bb61cac6e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                  'https://images.unsplash.com/photo-1609840113929-b130355987e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               },
               {
-                title: 'CoolApps',
-                subtitle: 'From mobile apps to gaming consoles',
+                title: 'Tratamentos Personalizados',
+                subtitle:
+                  'Do clareamento à ortodontia, tudo para o seu bem-estar',
                 image:
-                  'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                  'https://images.unsplash.com/photo-1504283985083-b5c0ea827551?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               },
               {
-                title: 'Grumpy',
-                subtitle: 'Bringing Art to everything',
+                title: 'Confiança e Cuidado',
+                subtitle: 'Sua saúde bucal em boas mãos',
                 image:
-                  'https://images.unsplash.com/photo-1629666451094-8908989cae90?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                  'https://images.unsplash.com/photo-1545126825-d5fc6d20a554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               }
             ].map((slide, index) => (
               <div key={index} className="hs-carousel-slide">
@@ -37,14 +42,6 @@ export const Hero = () => {
                     <span className="block text-white text-xl md:text-3xl">
                       {slide.subtitle}
                     </span>
-                    <div className="mt-5">
-                      <a
-                        className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100"
-                        href="#"
-                      >
-                        Read Case Studies
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>

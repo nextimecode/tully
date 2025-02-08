@@ -53,8 +53,8 @@ export default function Home() {
         <FeaturesSection />
         <TestimonialsSection />
         <BenefitsSection />
-        <FAQ />
         <BlogSection />
+        <FAQ />
         <ContactSection />
         <Footer />
       </div>

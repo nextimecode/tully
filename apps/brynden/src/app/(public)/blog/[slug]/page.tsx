@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation'
 
+import { BlogArticle } from '@/components/blog-article'
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
-interface Post {
+export interface Post {
   title: string
   slug: string
   description: string
@@ -23,9 +25,11 @@ async function getPost(slug: string) {
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch(`${baseUrl}/api/blog`, {
-    cache: 'force-cache'
-  }).then(res => res.json())
+  // const posts = await fetch(`${baseUrl}/api/blog`, {
+  //   cache: 'force-cache'
+  // }).then(res => res.json())
+
+  const posts = await fetch(`${baseUrl}/api/blog`).then(res => res.json())
 
   return posts.map((post: Post) => ({
     slug: String(post.slug)
@@ -53,10 +57,5 @@ export default async function Page({
   const { slug } = await params
   const post = await getPost(slug)
 
-  return (
-    <article>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </article>
-  )
+  return <BlogArticle {...post} />
 }
