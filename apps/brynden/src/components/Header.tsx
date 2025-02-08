@@ -19,7 +19,7 @@ export function Header() {
         aria-label="Global"
       >
         <div className="md:col-span-3">
-          <Image src={Logo} alt="NeXTverso" width={300} height={300} />
+          <Image src={Logo} alt="NeXTverso" width={150} height={71} />
         </div>
 
         <div className="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">

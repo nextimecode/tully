@@ -1,7 +1,5 @@
 import { notFound } from 'next/navigation'
 
-import { BlogArticle } from '@/components/blog-article'
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
 interface Post {
@@ -16,7 +14,9 @@ interface Post {
 }
 
 async function getPost(slug: string) {
-  const res = await fetch(`${baseUrl}/api/blog/${slug}`)
+  const res = await fetch(`${baseUrl}/api/blog/${slug}`, {
+    cache: 'force-cache'
+  })
   const post: Post = await res.json()
   if (!post) notFound()
   return post
@@ -53,5 +53,10 @@ export default async function Page({
   const { slug } = await params
   const post = await getPost(slug)
 
-  return <BlogArticle post={post} />
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </article>
+  )
 }
