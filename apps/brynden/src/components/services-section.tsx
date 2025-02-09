@@ -20,13 +20,13 @@ export function ServiceCard({
       className="bg-white group block rounded-xl overflow-hidden focus:outline-none"
     >
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-        <div className="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+        <div className="shrink-0 relative overflow-hidden w-full sm:w-56 h-44">
           <Image
             src={imageUrl}
             alt={title}
             layout="fill"
             objectFit="cover"
-            className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+            className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out"
           />
         </div>
 
@@ -73,7 +73,7 @@ export function ServicesSection() {
       description:
         'Cuidado especializado na prevenção e tratamento de doenças gengivais, promovendo saúde bucal e estética.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1574892986284-ec7b6181bf04?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -81,7 +81,7 @@ export function ServicesSection() {
       description:
         'Realce do sorriso com restaurações estéticas, tanto diretas quanto indiretas, para dentes danificados.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1499651681375-8afc5a4db253?q=80&w=1997&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -89,7 +89,7 @@ export function ServicesSection() {
       description:
         'Especialidade focada no tratamento e retratamento de canais radiculares, preservando dentes comprometidos.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -97,7 +97,7 @@ export function ServicesSection() {
       description:
         'Reabilitação oral com próteses sobre dentes naturais e implantes, restaurando função e estética.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1543430720-fa600c67e423?q=80&w=2117&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -105,7 +105,7 @@ export function ServicesSection() {
       description:
         'Tratamento especializado para disfunções temporomandibulares, aliviando dores e melhorando a função mandibular.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1618517047922-d18a5a36c109?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -113,7 +113,7 @@ export function ServicesSection() {
       description:
         'Implantes dentários para substituição de dentes ausentes, proporcionando funcionalidade e estética duradoura.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     },
     {
@@ -121,13 +121,13 @@ export function ServicesSection() {
       description:
         'Tratamentos estéticos como lentes de contato dental e clareamento para um sorriso mais bonito e saudável.',
       imageUrl:
-        'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80',
+        'https://images.unsplash.com/photo-1619634496831-881dbe7b8eb0?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       href: '#'
     }
   ]
 
   return (
-    <div className="bg-primary">
+    <div className="bg-primary" id="services">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl text-white font-bold lg:text-4xl dark:text-white">

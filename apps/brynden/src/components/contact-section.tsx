@@ -75,7 +75,7 @@ function PhoneIcon() {
 
 export function ContactSection() {
   return (
-    <div>
+    <div id="contact">
       <div className="max-w-7xl py-12 px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
           <h2 className="font-medium text-black text-2xl sm:text-4xl dark:text-white">

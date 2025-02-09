@@ -25,7 +25,7 @@ export const howItWorks = {
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works">
+    <section id="about">
       <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="text-center">
           <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
