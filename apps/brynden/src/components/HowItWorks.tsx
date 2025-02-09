@@ -3,7 +3,7 @@ import { ShieldCheck, Eye, Target } from 'lucide-react'
 export const howItWorks = {
   title: 'Sobre a Nossa Clínica',
   description:
-    'Saiba como nossos valores, missão e visão orientam cada detalhe do nosso atendimento, garantindo qualidade e confiança em todos os serviços prestados.',
+    'Conheça os valores que guiam nosso atendimento e garantem qualidade e confiança em cada serviço.',
   steps: [
     {
       title: 'Valores',

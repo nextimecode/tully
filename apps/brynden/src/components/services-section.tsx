@@ -61,6 +61,12 @@ export function ServiceCard({
 }
 
 export function ServicesSection() {
+  const mainContent = {
+    title: 'Nossos Serviços',
+    description:
+      'Conheça as especialidades que oferecemos para cuidar da sua saúde bucal.'
+  }
+
   const services = [
     {
       title: 'Periodontia',
@@ -123,6 +129,15 @@ export function ServicesSection() {
   return (
     <div className="bg-primary">
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl text-white font-bold lg:text-4xl dark:text-white">
+            {mainContent.title}
+          </h2>
+          <p className="mt-3 text-gray-200 dark:text-neutral-400">
+            {mainContent.description}
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
           {services.map((service, index) => (
             <ServiceCard
