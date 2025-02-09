@@ -5,7 +5,7 @@ const version = packageInfo.version
 
 export function Footer() {
   return (
-    <footer className="max-w-[85rem] mb-12">
+    <footer className="mb-12">
       {/* Grid */}
       <div className="text-center">
         {/* <div>

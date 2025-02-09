@@ -12,14 +12,14 @@ export const Hero = () => {
                 title: 'Sorrisos Saudáveis',
                 subtitle: 'Cuidando do seu sorriso com tecnologia e carinho',
                 image:
-                  'https://images.unsplash.com/photo-1609840113929-b130355987e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                  'https://images.unsplash.com/photo-1504283985083-b5c0ea827551?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               },
               {
                 title: 'Tratamentos Personalizados',
                 subtitle:
                   'Do clareamento à ortodontia, tudo para o seu bem-estar',
                 image:
-                  'https://images.unsplash.com/photo-1504283985083-b5c0ea827551?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                  'https://images.unsplash.com/photo-1609840113929-b130355987e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               },
               {
                 title: 'Confiança e Cuidado',

@@ -37,7 +37,7 @@ export async function BlogSection() {
   const posts = await getPosts()
 
   return (
-    <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
+    <div id="blog" className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
       {/* Title */}
       <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">

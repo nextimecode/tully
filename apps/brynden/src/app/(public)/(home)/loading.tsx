@@ -6,7 +6,7 @@ export default function HomeLoading() {
       {/* <Skeleton className="col-span-6 row-span-6 h-[856px]" />
       <Skeleton className="col-span-3 row-span-3" />
       <Skeleton className="col-span-3 row-span-3" /> */}
-      teste
+      carregando...
     </div>
   )
 }

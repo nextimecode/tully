@@ -1,58 +1,42 @@
 import Link from 'next/link'
 
-const DocumentationIcon = () => (
-  <svg
-    className="shrink-0 size-5"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-  </svg>
-)
+import { UserCheck, HeartHandshake, Users } from 'lucide-react'
 
-const CommunitySupportIcon = () => (
-  <svg
-    className="shrink-0 size-5"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
-    <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
-  </svg>
-)
+const ExpertiseIcon = () => <UserCheck className="shrink-0 size-5" />
 
-const AffordableIcon = () => (
-  <svg
-    className="shrink-0 size-5"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M7 10v12" />
-    <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z" />
-  </svg>
-)
+const HumanizedCareIcon = () => <HeartHandshake className="shrink-0 size-5" />
+
+const TalentSearchIcon = () => <Users className="shrink-0 size-5" />
+
+const mainContent = {
+  title: 'A história da Implalents',
+  description:
+    'A Implalents nasceu com o propósito de oferecer um atendimento odontológico especializado, conduzido por profissionais que, além de dentistas, são os próprios proprietários da clínica. Em um cenário onde franquias lideradas por empresários não dentistas crescem nas grandes cidades, transformando pacientes em números e priorizando o lucro em detrimento da qualidade, nos destacamos por nossa abordagem ética e personalizada. Esse modelo de mercado resulta em alta rotatividade de profissionais e compromete a continuidade dos tratamentos, muitas vezes não executados pelo mesmo dentista que realizou o planejamento inicial. Na Implalents, cada colaborador é selecionado por seu currículo de excelência e, acima de tudo, pela paixão pelo atendimento humanizado. Nosso modelo não é de franquias, mas de sociedade, valorizando a parceria e o compromisso em encontrar novos talentos que compartilhem nossa filosofia de cuidado e excelência.',
+  linkText: 'Entre em contato para agendar sua consulta',
+  linkHref:
+    'https://api.whatsapp.com/send?phone=5519981128098&text=Ol%C3%A1,%20ImplaLents!%0AGostaria%20de%20agendar%20uma%20consulta.'
+}
+
+const features = [
+  {
+    title: 'Profissionais especializados',
+    description:
+      'Todos nossos dentistas possuem currículo de excelência e são escolhidos por sua paixão pelo atendimento humanizado.',
+    icon: <ExpertiseIcon />
+  },
+  {
+    title: 'Atendimento humanizado',
+    description:
+      'Tratamos cada paciente de forma única, garantindo que o mesmo profissional acompanhe todo o processo de tratamento.',
+    icon: <HumanizedCareIcon />
+  },
+  {
+    title: 'Filosofia de sociedade',
+    description:
+      'Não trabalhamos com franquias. Buscamos talentos para compartilhar nossa filosofia de cuidado e excelência.',
+    icon: <TalentSearchIcon />
+  }
+]
 
 export const FeaturesSection = () => {
   return (
@@ -60,20 +44,18 @@ export const FeaturesSection = () => {
       <div className="grid md:grid-cols-2 gap-12">
         <div className="lg:w-3/4">
           <h2 className="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white">
-            Ferramentas colaborativas para criar uma melhor experiência do
-            usuário
+            {mainContent.title}
           </h2>
           <p className="mt-3 text-gray-800 dark:text-neutral-400">
-            Ajudamos empresas a transformar ideias em realidade no mundo
-            digital, projetando e implementando as ferramentas tecnológicas que
-            elas precisam para vencer.
+            {mainContent.description}
           </p>
           <p className="mt-5">
             <Link
-              href="#"
-              className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+              href={mainContent.linkHref}
+              className="transition-all duration-300 hover:bg-primary-600 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-semibold rounded-lg border border-transparent bg-primary text-white disabled:opacity-50 disabled:pointer-events-none"
+              target="_blank"
             >
-              Entre em contato com o time de vendas para saber mais
+              {mainContent.linkText}
               <svg
                 className="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,24 +95,3 @@ export const FeaturesSection = () => {
     </div>
   )
 }
-
-const features = [
-  {
-    title: 'Documentação líder no setor',
-    description:
-      'Nossa documentação e bibliotecas de clientes extensas contêm tudo o que uma empresa precisa para construir uma integração personalizada em uma fração do tempo.',
-    icon: <DocumentationIcon />
-  },
-  {
-    title: 'Suporte da comunidade de desenvolvedores',
-    description:
-      'Contribuímos ativamente para projetos de código aberto—retribuindo à comunidade através do desenvolvimento, correções e patrocínios.',
-    icon: <CommunitySupportIcon />
-  },
-  {
-    title: 'Simples e acessível',
-    description:
-      'De cartões de embarque a ingressos de cinema, praticamente não há nada que você não possa armazenar com o Preline.',
-    icon: <AffordableIcon />
-  }
-]
