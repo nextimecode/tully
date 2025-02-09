@@ -17,7 +17,7 @@ export function ServiceCard({
   return (
     <Link
       href={href}
-      className="group block rounded-xl overflow-hidden focus:outline-none"
+      className="bg-white group block rounded-xl overflow-hidden focus:outline-none"
     >
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
         <div className="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
@@ -121,17 +121,19 @@ export function ServicesSection() {
   ]
 
   return (
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-      <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            description={service.description}
-            imageUrl={service.imageUrl}
-            href={service.href}
-          />
-        ))}
+    <div className="bg-primary">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              imageUrl={service.imageUrl}
+              href={service.href}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

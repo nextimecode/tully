@@ -2,7 +2,6 @@ export const dynamic = 'force-dynamic'
 
 import { Metadata } from 'next'
 
-import { BenefitsSection } from '@/components/BenefitsSection'
 import { BlogSection } from '@/components/blog-section'
 import { ContactSection } from '@/components/contact-section'
 import { FAQ } from '@/components/FAQ'
@@ -51,11 +50,10 @@ export default function Home() {
       <div className="flex flex-col gap-20 lg:gap-28">
         <Hero />
         <HowItWorks />
-        <ServicesSection />
         <FeaturesSection />
-        <TestimonialsSection />
-        <BenefitsSection />
+        <ServicesSection />
         <BlogSection />
+        <TestimonialsSection />
         <FAQ />
         <ContactSection />
         <Footer />
