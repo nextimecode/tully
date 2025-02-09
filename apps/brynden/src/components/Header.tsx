@@ -15,7 +15,7 @@ export function Header() {
       >
         <div className="md:col-span-3">
           <Link href="/">
-            <Image src={Logo} alt="NeXTverso" width={200} height={95} />
+            <Image src={Logo} alt="logo" width={200} height={95} />
           </Link>
         </div>
 
