@@ -11,6 +11,7 @@ import { Hero } from '@/components/Hero'
 import { HowItWorks } from '@/components/HowItWorks'
 import { ServicesSection } from '@/components/services-section'
 import { TestimonialsSection } from '@/components/TestimonialsSection'
+import { WhatsAppButton } from '@/components/whats-app-button'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -57,6 +58,7 @@ export default function Home() {
         <FAQ />
         <ContactSection />
         <Footer />
+        <WhatsAppButton />
       </div>
     </main>
   )

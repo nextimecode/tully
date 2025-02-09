@@ -29,9 +29,10 @@ export function BlogArticle({ title, description, imageUrl, content }: Post) {
             width={560}
             height={315}
           />
-          <p className="text-lg text-gray-800 dark:text-neutral-200">
-            {content}
-          </p>
+          <div
+            className="text-lg text-gray-800 dark:text-neutral-200 space-y-4"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </div>
       </div>
     </div>

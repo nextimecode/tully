@@ -2,15 +2,15 @@ import Image from 'next/image'
 
 // Text content in JSON format
 const contactInfo = {
-  title: 'Contacts',
-  addressTitle: 'Our address',
-  country: 'United Kingdom',
+  title: 'Contatos',
+  addressTitle: 'Nosso endereço',
+  country: 'Reino Unido',
   address: '300 Bath Street, Tay House, Glasgow G2 4JR',
-  contactTitle: 'Our contacts',
-  emailLabel: 'Email us',
+  contactTitle: 'Nossos contatos',
+  emailLabel: 'Envie um e-mail',
   email: 'hello@example.so',
-  phoneLabel: 'Call us',
-  phone: '+44 222 777-000'
+  phoneLabel: 'Ligue para nós',
+  phone: '+55 19 98112-8098'
 }
 
 // Icons as separate components

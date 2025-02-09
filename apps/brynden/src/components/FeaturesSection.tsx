@@ -13,7 +13,8 @@ const mainContent = {
   description:
     'A Implalents nasceu com o propósito de oferecer um atendimento odontológico especializado, conduzido por profissionais que, além de dentistas, são os próprios proprietários da clínica. Em um cenário onde franquias lideradas por empresários não dentistas crescem nas grandes cidades, transformando pacientes em números e priorizando o lucro em detrimento da qualidade, nos destacamos por nossa abordagem ética e personalizada. Esse modelo de mercado resulta em alta rotatividade de profissionais e compromete a continuidade dos tratamentos, muitas vezes não executados pelo mesmo dentista que realizou o planejamento inicial. Na Implalents, cada colaborador é selecionado por seu currículo de excelência e, acima de tudo, pela paixão pelo atendimento humanizado. Nosso modelo não é de franquias, mas de sociedade, valorizando a parceria e o compromisso em encontrar novos talentos que compartilhem nossa filosofia de cuidado e excelência.',
   linkText: 'Entre em contato para agendar sua consulta',
-  linkHref: '#'
+  linkHref:
+    'https://api.whatsapp.com/send?phone=5519981128098&text=Ol%C3%A1,%20ImplaLents!%0AGostaria%20de%20agendar%20uma%20consulta.'
 }
 
 const features = [
@@ -51,7 +52,8 @@ export const FeaturesSection = () => {
           <p className="mt-5">
             <Link
               href={mainContent.linkHref}
-              className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+              className="transition-all duration-300 hover:bg-primary-600 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-semibold rounded-lg border border-transparent bg-primary text-white disabled:opacity-50 disabled:pointer-events-none"
+              target="_blank"
             >
               {mainContent.linkText}
               <svg
