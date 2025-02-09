@@ -2,23 +2,23 @@ import Image from 'next/image'
 
 const testimonials = [
   {
-    text: 'Com o Preline, conseguimos acompanhar nosso desempenho em detalhes. Tornou-se uma ferramenta essencial para crescermos e nos conectarmos com nosso público.',
-    name: 'Josh Tyson',
-    title: 'Gerente de Produto | Capsule',
+    text: 'Na Implalents, encontrei um atendimento diferenciado. O cuidado e a atenção dos dentistas foram fundamentais para minha recuperação. Recomendo a todos que buscam qualidade e confiança.',
+    name: 'Carlos Menezes',
+    title: 'Empresário | Paciente satisfeito',
     imgSrc:
       'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80'
   },
   {
-    text: 'Em setembro, completarei 2 anos usando este tema. Passei por várias atualizações e mudanças e estou muito feliz com a consistência e o esforço da equipe.',
-    name: 'Luisa',
-    title: 'Diretora Sênior de Operações | Fitbit',
+    text: 'Fui atendida por profissionais que realmente se importam com o paciente. Desde a primeira consulta até o final do tratamento, senti que estava em boas mãos.',
+    name: 'Luísa Ferreira',
+    title: 'Advogada | Paciente da Implalents',
     imgSrc:
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80'
   },
   {
-    text: 'Design refrescante e instigante que mudou minha forma de criar sites. Tipografia excelente, design moderno e limpo, e tons de cores incríveis.',
-    name: 'Alisa Williams',
-    title: 'Empreendedora | Cliente satisfeita',
+    text: 'O atendimento humanizado da Implalents faz toda a diferença. O mesmo dentista me acompanhou durante todo o tratamento, garantindo confiança e resultados impecáveis.',
+    name: 'Mariana Santos',
+    title: 'Engenheira | Cliente fiel',
     imgSrc:
       'https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80'
   }
