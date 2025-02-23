@@ -38,7 +38,7 @@ export function ServiceCard({
           <p className="mt-3 text-gray-600 dark:text-neutral-400">
             {description}
           </p>
-          <p className="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
+          {/* <p className="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
             Saiba mais
             <svg
               className="shrink-0 size-4"
@@ -54,7 +54,7 @@ export function ServiceCard({
             >
               <path d="m9 18 6-6-6-6" />
             </svg>
-          </p>
+          </p> */}
         </div>
       </div>
     </Link>

@@ -4,7 +4,6 @@ import { Metadata } from 'next'
 
 import { BlogSection } from '@/components/blog-section'
 import { ContactSection } from '@/components/contact-section'
-import { FAQ } from '@/components/FAQ'
 import { FeaturesSection } from '@/components/FeaturesSection'
 import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
@@ -55,7 +54,7 @@ export default function Home() {
         <ServicesSection />
         <BlogSection />
         <TestimonialsSection />
-        <FAQ />
+        {/* <FAQ /> */}
         <ContactSection />
         <Footer />
         <WhatsAppButton />

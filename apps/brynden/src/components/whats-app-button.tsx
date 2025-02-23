@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const WhatsAppButton = () => {
   const nextSocialNetwork =
-    'https://api.whatsapp.com/send?phone=5519981128098&text=Ol%C3%A1,%20ImplaLents!%0AGostaria%20de%20agendar%20uma%20consulta.'
+    'https://api.whatsapp.com/send?phone=5519981128098&text=Ol%C3%A1%2C+vi+o+contato+de+voc%C3%AAs+no+site%2C+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+servi%C3%A7os'
 
   return (
     <div className="fixed bottom-5 right-5 w-15 h-15 z-50">
