@@ -4,11 +4,11 @@ import Image from 'next/image'
 const contactInfo = {
   title: 'Contatos',
   addressTitle: 'Nosso endereço',
-  country: 'Reino Unido',
-  address: '300 Bath Street, Tay House, Glasgow G2 4JR',
+  country: 'Brasil',
+  address: 'RUA DR. JOSÉ VIZIOLLI, 288, Piracicaba',
   contactTitle: 'Nossos contatos',
   emailLabel: 'Envie um e-mail',
-  email: 'hello@example.so',
+  email: 'implalents@hotmail.com',
   phoneLabel: 'Ligue para nós',
   phone: '+55 19 98112-8098'
 }
@@ -131,7 +131,7 @@ export function ContactSection() {
                     </p>
                     <p>
                       <a
-                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
+                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
                         href={`mailto:${contactInfo.email}`}
                       >
                         {contactInfo.email}
@@ -149,7 +149,7 @@ export function ContactSection() {
                     </p>
                     <p>
                       <a
-                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
+                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
                         href={`tel:${contactInfo.phone.replace(/ /g, '')}`}
                       >
                         {contactInfo.phone}

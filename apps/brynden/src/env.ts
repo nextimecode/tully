@@ -18,7 +18,6 @@ const vercelPreviewUrl = process.env.VERCEL_GIT_COMMIT_REF
 // Função para substituir o nome do projeto na URL
 const replaceProjectName = (url: string, projectName: string) => {
   const replacedUrl = url.replace('name', projectName)
-  console.error(`Replaced URL for ${projectName}:`, replacedUrl)
   return replacedUrl
 }
 
@@ -29,7 +28,6 @@ const getBaseUrl = () => {
     process.env.NEXT_PUBLIC_VERCEL_PREVIEW_URL || vercelPreviewUrl
 
   if (isPreview && previewUrl) {
-    console.error('Vercel Preview URL:', previewUrl)
     return {
       bryndenUrl: replaceProjectName(previewUrl, 'brynden')
     }
@@ -65,6 +63,3 @@ export const env = createEnv({
     VERCEL_PREVIEW_URL: vercelPreviewUrl
   }
 })
-
-console.error('Env Variables:', env)
-console.error('Base URLs:', getBaseUrl())

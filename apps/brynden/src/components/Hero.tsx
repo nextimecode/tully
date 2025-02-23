@@ -1,44 +1,57 @@
+'use client'
+
+import Image from 'next/image'
+
+const slides = [
+  {
+    title: 'ImplaLents',
+    subtitle: 'Seu sorriso ainda melhor',
+    image: '/assets/logo.svg'
+  },
+  {
+    title: 'Sorrisos Saudáveis',
+    subtitle: 'Cuidando do seu sorriso com tecnologia e carinho',
+    image: '/assets/slide1.jpg'
+  },
+  {
+    title: 'Tratamentos Personalizados',
+    subtitle: 'Do clareamento à ortodontia, tudo para o seu bem-estar',
+    image: '/assets/slide2.jpg'
+  },
+  {
+    title: 'Confiança e Cuidado',
+    subtitle: 'Sua saúde bucal em boas mãos',
+    image: '/assets/slide3.jpg'
+  }
+]
+
 export const Hero = () => {
   return (
     <div className="px-4 lg:px-6">
       <div
         className="relative"
-        data-hs-carousel='{"loadingClasses": "opacity-0"}'
+        data-hs-carousel='{"loadingClasses": "opacity-0", "infinite": true, "isAutoPlay": true, "interval": 5000}'
       >
         <div className="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)] bg-gray-100 rounded-2xl dark:bg-neutral-800">
           <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-            {[
-              {
-                title: 'Sorrisos Saudáveis',
-                subtitle: 'Cuidando do seu sorriso com tecnologia e carinho',
-                image:
-                  'https://images.unsplash.com/photo-1504283985083-b5c0ea827551?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              },
-              {
-                title: 'Tratamentos Personalizados',
-                subtitle:
-                  'Do clareamento à ortodontia, tudo para o seu bem-estar',
-                image:
-                  'https://images.unsplash.com/photo-1609840113929-b130355987e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              },
-              {
-                title: 'Confiança e Cuidado',
-                subtitle: 'Sua saúde bucal em boas mãos',
-                image:
-                  'https://images.unsplash.com/photo-1545126825-d5fc6d20a554?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              }
-            ].map((slide, index) => (
-              <div key={index} className="hs-carousel-slide">
-                <div
-                  className={`h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-cover bg-center bg-no-repeat`}
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                >
-                  <div className="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
-                    <span className="block text-white">{slide.title}</span>
-                    <span className="block text-white text-xl md:text-3xl">
-                      {slide.subtitle}
-                    </span>
-                  </div>
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className="hs-carousel-slide relative h-[30rem] md:h-[calc(100vh-106px)]"
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-2xl"
+                  priority={index === 0}
+                />
+                <div className="absolute bottom-0 left-0 w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:py-10 bg-black/50 rounded-bl-2xl">
+                  <span className="block text-white">{slide.title}</span>
+                  <span className="block text-white text-xl md:text-3xl">
+                    {slide.subtitle}
+                  </span>
                 </div>
               </div>
             ))}

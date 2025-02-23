@@ -8,14 +8,14 @@ import Logo from 'public/assets/logo.svg'
 export function Header() {
   return (
     // <!-- ========== HEADER ========== -->
-    <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+    <header className="bg-primary flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7 mb-4">
       <nav
         className="relative max-w-7xl w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 mx-auto"
         aria-label="Global"
       >
         <div className="md:col-span-3">
           <Link href="/">
-            <Image src={Logo} alt="logo" width={200} height={95} />
+            <Image src={Logo} alt="logo" width={300} height={143} />
           </Link>
         </div>
 
@@ -72,7 +72,7 @@ export function Header() {
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
             <div>
               <a
-                className="relative inline-block text-black dark:text-white"
+                className="relative inline-block text-white dark:text-white"
                 href="#about"
                 aria-current="page"
               >
@@ -81,7 +81,7 @@ export function Header() {
             </div>
             <div>
               <a
-                className="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
+                className="inline-block text-white hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
                 href="#services"
               >
                 Nossos Serviços
@@ -89,7 +89,7 @@ export function Header() {
             </div>
             <div>
               <a
-                className="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
+                className="inline-block text-white hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
                 href="#blog"
               >
                 Blog
@@ -97,7 +97,7 @@ export function Header() {
             </div>
             <div>
               <a
-                className="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
+                className="inline-block text-white hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
                 href="#faq"
               >
                 Dúvidas Frequentes
@@ -105,7 +105,7 @@ export function Header() {
             </div>
             <div>
               <a
-                className="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
+                className="inline-block text-white hover:text-gray-600 dark:text-white dark:hover:text-neutral-300"
                 href="#contact"
               >
                 Contato
