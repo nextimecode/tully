@@ -21,13 +21,14 @@ export function ServiceCard({
     >
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
         <div className="shrink-0 relative overflow-hidden w-full sm:w-56 h-44">
-          <Image
-            src={imageUrl}
-            alt={title}
-            layout="fill"
-            objectFit="cover"
-            className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out"
-          />
+          <div className="relative w-full h-full">
+            <Image
+              src={imageUrl}
+              alt={title}
+              fill
+              className="object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out"
+            />
+          </div>
         </div>
 
         <div className="grow">
