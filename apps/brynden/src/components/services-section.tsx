@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 type ServiceCardProps = {
   title: string
@@ -15,10 +14,7 @@ export function ServiceCard({
   href
 }: ServiceCardProps) {
   return (
-    <Link
-      href={href}
-      className="bg-white group block rounded-xl overflow-hidden focus:outline-none"
-    >
+    <div className="bg-white group block rounded-xl overflow-hidden focus:outline-none">
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
         <div className="shrink-0 relative overflow-hidden w-full sm:w-56 h-44">
           <div className="relative w-full h-full">
@@ -57,7 +53,7 @@ export function ServiceCard({
           </p> */}
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 
