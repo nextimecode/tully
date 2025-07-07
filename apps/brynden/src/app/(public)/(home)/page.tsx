@@ -9,7 +9,6 @@ import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 import { HowItWorks } from '@/components/HowItWorks'
 import { ServicesSection } from '@/components/services-section'
-import { TestimonialsSection } from '@/components/TestimonialsSection'
 import { WhatsAppButton } from '@/components/whats-app-button'
 
 export const metadata: Metadata = {
@@ -53,7 +52,7 @@ export default function Home() {
         <FeaturesSection />
         <ServicesSection />
         <BlogSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         {/* <FAQ /> */}
         <ContactSection />
         <Footer />
